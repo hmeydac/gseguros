@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceBroker.Web", "InsuranceBroker.Web\InsuranceBroker.Web.csproj", "{52789473-B68E-4891-B96D-23472B19AEBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceBroker.Web.Tests", "InsuranceBroker.Web.Tests\InsuranceBroker.Web.Tests.csproj", "{238E043B-9BC3-44EE-BBE5-EE7821B6F776}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{37DB0CE0-9099-493B-A86A-206D18F0CADA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3837838A-99A6-4429-A0C3-9D748C0EE6DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52789473-B68E-4891-B96D-23472B19AEBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52789473-B68E-4891-B96D-23472B19AEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52789473-B68E-4891-B96D-23472B19AEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52789473-B68E-4891-B96D-23472B19AEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{238E043B-9BC3-44EE-BBE5-EE7821B6F776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{238E043B-9BC3-44EE-BBE5-EE7821B6F776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{238E043B-9BC3-44EE-BBE5-EE7821B6F776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{238E043B-9BC3-44EE-BBE5-EE7821B6F776}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52789473-B68E-4891-B96D-23472B19AEBA} = {37DB0CE0-9099-493B-A86A-206D18F0CADA}
+		{238E043B-9BC3-44EE-BBE5-EE7821B6F776} = {3837838A-99A6-4429-A0C3-9D748C0EE6DD}
+	EndGlobalSection
+EndGlobal
