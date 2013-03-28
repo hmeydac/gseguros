@@ -1,0 +1,30 @@
+﻿@model List<InsuranceBroker.Web.Areas.Administration.Models.CustomerModel>
+@{
+    ViewBag.Title = "Clientes";
+    Layout = "~/Areas/Administration/Views/Shared/_Layout.cshtml";
+}
+<section class="main-content">
+    <p class="section-title">@ViewBag.Title</p>
+    <div class="fluid-row">
+        <div class="action-button" onclick="callAction('@ViewBag.NewAction','');">NUEVO</div>
+    </div>
+    <div class="fluid-row">
+        @foreach (var contentItem in this.Model)
+        {
+            <div class="content-block" onclick="callAction('@ViewBag.ViewAction', '@contentItem.Id');">
+                <img class="icon-badge" src="~/Content/images/life.png" />
+                <div class="block-title">@contentItem.DisplayName</div>
+                <div class="block-info">@contentItem.AdditionalInfo</div>
+            </div>
+        }
+    </div>
+</section>
+
+@section scripts
+{
+    <script>
+        function callAction(action, param) {
+            window.location = "/Administration/Customer/" + action + "/" + param;
+        }
+    </script>
+}

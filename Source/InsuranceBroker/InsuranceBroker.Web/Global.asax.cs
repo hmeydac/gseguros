@@ -1,27 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
-using System.Web.Mvc;
-using System.Web.Optimization;
-using System.Web.Routing;
-
-namespace InsuranceBroker.Web
+﻿namespace InsuranceBroker.Web
 {
+    using System.Collections.Generic;
+    using System.Web.Http;
+    using System.Web.Mvc;
+    using System.Web.Optimization;
+    using System.Web.Routing;
+
+    using AutoMapper;
+
+    using InsuranceBroker.Model.Entities;
+    using InsuranceBroker.Web.Areas.Administration.Models;
+
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
-
     public class WebApiApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            this.MapEntities();
+        }
+
+        private void MapEntities()
+        {
+            Mapper.CreateMap<CustomerModel, Customer>();
+            Mapper.CreateMap<List<CustomerModel>, List<Customer>>();
+            Mapper.CreateMap<Customer, CustomerModel>();
+            Mapper.CreateMap<List<Customer>, List<CustomerModel>>();
         }
     }
 }

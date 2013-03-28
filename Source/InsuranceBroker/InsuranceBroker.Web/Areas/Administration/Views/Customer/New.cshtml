@@ -1,0 +1,48 @@
+﻿@model InsuranceBroker.Web.Areas.Administration.Models.CustomerModel
+@{
+    ViewBag.Title = "Nuevo Cliente";
+    Layout = "~/Areas/Administration/Views/Shared/_Layout.cshtml";
+}
+
+<section class="main-content">
+    <p class="section-title">@ViewBag.Title</p>
+    @using (Html.BeginForm("New", "Customer"))
+    {
+        @Html.ValidationSummary(true)
+        <div class="fluid-row">
+            <div class="action-button" onclick=" submit(); ">GRABAR</div>
+            <div class="action-button" onclick=" callAction('@ViewBag.ListAction'); ">CANCELAR</div>
+        </div>
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <div class="field-title">Nombre:</div>
+            @Html.EditorFor(c => c.FirstName)
+            @Html.ValidationMessageFor(c => c.FirstName)
+            <div class="field-title">Apellido:</div>
+            @Html.EditorFor(c => c.LastName)
+            @Html.ValidationMessageFor(c => c.LastName)
+            <div class="field-title">Teléfono:</div>
+            @Html.EditorFor(c => c.Telephone)
+            @Html.ValidationMessageFor(c => c.Telephone)
+            <div class="field-title">Email:</div>
+            @Html.EditorFor(c => c.Email)
+        </fieldset>
+    }
+</section>
+
+@section scripts
+{
+    <script>
+        function callAction(action, param) {
+            if (!param) {
+                param = '';
+            }
+            
+            window.location = "/Administration/Customer/" + action + "/" + param;
+        }
+        
+        function submit() {
+            $('form').submit();
+        }
+    </script>
+}

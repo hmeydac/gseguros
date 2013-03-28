@@ -15,13 +15,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(75, 75, 75);
     color: white;
 }
 
 .fluid-row div {
-    display: inline;
-    line-height: 50px;
+    display: inline-block;
 }
 
 .top-menu-links {
@@ -54,4 +53,105 @@ body {
     font-weight: 100;
     font-size: 22pt;
     margin-left: 10px;
+}
+
+
+
+/* Content */
+.main-content {
+    top: 50px;
+    left: 15px;
+    position: absolute;
+}
+
+.content-block {
+    width: 160px;
+    height: 80px;
+    border: solid 1px rgb(200, 200, 200);
+    margin-right: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-align: right;
+    vertical-align: top;
+}
+
+    .content-block:hover {
+        background-color: rgb(255, 179, 67);
+        cursor: pointer;
+        color: white;
+        border: solid 1px rgb(200, 200, 200);
+        margin-right: 10px;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+
+.icon-badge {
+    float: left;
+    width: 32px;
+    height: 32px;
+}
+
+.block-title {
+    position: relative;
+    height: 50px;
+    font-size: 14pt;
+    font-weight: 100;
+    color: rgb(50, 50, 50);
+    width: 120px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.block-info {
+    position: relative;
+    font-size: 10pt;
+    right: 5px;
+    bottom: -5px;
+}
+
+.section-title {
+    font-size: 32pt;
+    font-weight: 100;
+    margin: 0;
+    text-transform: uppercase;
+    color: rgb(100, 100, 100);
+}
+
+.action-button {
+    color: white;
+    border: solid 1px rgb(41, 154, 238);
+    background-color: rgb(0, 114, 188);
+    width: 100px;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: rgb(61, 174, 255);
+}
+
+
+.main-content fieldset {
+    margin-top: 15px;
+    font-size: 10pt;
+}
+
+.main-content fieldset input[type=text] {
+    width: 98%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 10pt;
+}
+
+.field-title {
+    font-weight: bold;
+}
+
+.field-validation-error {
+    color: red;
 }
