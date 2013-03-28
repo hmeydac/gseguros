@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{AD7AB7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceBroker.Model", "InsuranceBroker.Model\InsuranceBroker.Model.csproj", "{A2D4C06A-033A-401E-A886-85B571FC9F88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceBroker.Services", "InsuranceBroker.Services\InsuranceBroker.Services.csproj", "{884994F6-CAFD-4753-931B-CEAA4EEFCF48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceBroker.Entities", "InsuranceBroker.Entities\InsuranceBroker.Entities.csproj", "{E54E70DC-0311-416F-A53F-EC1F778C3249}"
+EndProject
 Global
 	GlobalSection(JSLint) = preSolution
 		SolutionConfigurationLocation = JSLintOptions.xml
@@ -46,6 +50,14 @@ Global
 		{A2D4C06A-033A-401E-A886-85B571FC9F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2D4C06A-033A-401E-A886-85B571FC9F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2D4C06A-033A-401E-A886-85B571FC9F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{884994F6-CAFD-4753-931B-CEAA4EEFCF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{884994F6-CAFD-4753-931B-CEAA4EEFCF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{884994F6-CAFD-4753-931B-CEAA4EEFCF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{884994F6-CAFD-4753-931B-CEAA4EEFCF48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E54E70DC-0311-416F-A53F-EC1F778C3249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E54E70DC-0311-416F-A53F-EC1F778C3249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E54E70DC-0311-416F-A53F-EC1F778C3249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E54E70DC-0311-416F-A53F-EC1F778C3249}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +66,7 @@ Global
 		{52789473-B68E-4891-B96D-23472B19AEBA} = {37DB0CE0-9099-493B-A86A-206D18F0CADA}
 		{238E043B-9BC3-44EE-BBE5-EE7821B6F776} = {3837838A-99A6-4429-A0C3-9D748C0EE6DD}
 		{A2D4C06A-033A-401E-A886-85B571FC9F88} = {AD7AB7C6-00F1-4499-9C7E-1E49C326883A}
+		{884994F6-CAFD-4753-931B-CEAA4EEFCF48} = {AD7AB7C6-00F1-4499-9C7E-1E49C326883A}
+		{E54E70DC-0311-416F-A53F-EC1F778C3249} = {AD7AB7C6-00F1-4499-9C7E-1E49C326883A}
 	EndGlobalSection
 EndGlobal

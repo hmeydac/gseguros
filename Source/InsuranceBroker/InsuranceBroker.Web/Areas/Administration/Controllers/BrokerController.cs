@@ -14,49 +14,49 @@
 
     using WebGrease.Css.Extensions;
 
-    public class CustomerController : Controller
+    public class BrokerController : Controller
     {
-        private readonly CustomerService entityService = new CustomerService();
-        
+        private readonly BrokerService entityService = new BrokerService();
+
         public ActionResult Index()
         {
-            this.ViewBag.Controller = "Customer";
+            this.ViewBag.Controller = "Broker";
             this.ViewBag.ViewAction = "Details";
             this.ViewBag.NewAction = "New";
-            var entitys = this.GetList();
-            return this.View(entitys.OrderBy(c => c.DisplayName).ToList());
+            var list = this.GetList();
+            return this.View(list.OrderBy(c => c.DisplayName).ToList());
         }
 
         public ActionResult New()
         {
-            this.ViewBag.Controller = "Customer";
+            this.ViewBag.Controller = "Broker";
             this.ViewBag.ListAction = "Index";
             return this.View();
         }
 
 
         [HttpPost]
-        public ActionResult New(CustomerModel newCustomer)
+        public ActionResult New(BrokerModel newBroker)
         {
             if (this.ModelState.IsValid)
             {
-                var entity = Mapper.Map<Customer>(newCustomer);
+                var entity = Mapper.Map<Broker>(newBroker);
                 this.entityService.Add(entity);
                 return this.RedirectToAction("Index");
             }
 
-            return this.View(newCustomer);
+            return this.View(newBroker);
         }
 
         public ActionResult Details(Guid id)
         {
-            this.ViewBag.Controller = "Customer";
             var entity = this.GetEntityDetails(id);
             if (entity == null)
             {
                 throw new InvalidDataException("Cliente no encontrado. Id: " + id.ToString());
             }
 
+            this.ViewBag.Controller = "Broker";
             this.ViewBag.ListAction = "Index";
             this.ViewBag.EditAction = "Edit";
             this.ViewBag.DeleteAction = "Delete";
@@ -70,22 +70,22 @@
             {
                 throw new InvalidDataException("Cliente no encontrado. Id: " + id.ToString());
             }
-
-            this.ViewBag.Controller = "Customer";
+            
+            this.ViewBag.Controller = "Broker";
             this.ViewBag.ViewAction = "Details";
             return this.View(entity);
         }
 
         [HttpPost]
-        public ActionResult Edit(CustomerModel editedCustomer)
+        public ActionResult Edit(BrokerModel editedBroker)
         {
             if (this.ModelState.IsValid)
             {
-                var entity = this.UpdateEntity(editedCustomer);
+                var entity = this.UpdateEntity(editedBroker);
                 return this.RedirectToAction("Details", new { entity.Id });
             }
 
-            return this.View(editedCustomer);
+            return this.View(editedBroker);
         }
 
         public ActionResult Delete(Guid id)
@@ -96,41 +96,41 @@
                 throw new InvalidDataException("Cliente no encontrado. Id: " + id.ToString());
             }
 
-            this.ViewBag.Controller = "Customer";
+            this.ViewBag.Controller = "Broker";
             this.ViewBag.ViewAction = "Details";
             return this.View(entity);
         }
 
         [HttpPost]
-        public ActionResult Delete(CustomerModel entity)
+        public ActionResult Delete(BrokerModel entity)
         {
             this.DeleteEntity(entity);
             return this.RedirectToAction("Index");
         }
 
-        private Customer UpdateEntity(CustomerModel editedEntity)
+        private Broker UpdateEntity(BrokerModel editedEntity)
         {
-            var entity = Mapper.Map<Customer>(editedEntity);
+            var entity = Mapper.Map<Broker>(editedEntity);
             this.entityService.Update(entity);
             return entity;
         }
 
-        private void DeleteEntity(CustomerModel entity)
+        private void DeleteEntity(BrokerModel entity)
         {
             this.entityService.Delete(entity.Id);
         }
 
-        private CustomerModel GetEntityDetails(Guid id)
+        private BrokerModel GetEntityDetails(Guid id)
         {
             var entity = this.entityService.GetById(id);
-            return Mapper.Map<CustomerModel>(entity);
+            return Mapper.Map<BrokerModel>(entity);
         }
 
-        private IEnumerable<CustomerModel> GetList()
+        private IEnumerable<BrokerModel> GetList()
         {
             var entities = this.entityService.GetList();
-            var modelList = new List<CustomerModel>();
-            entities.ForEach(c => modelList.Add(Mapper.Map<CustomerModel>(c)));
+            var modelList = new List<BrokerModel>();
+            entities.ForEach(c => modelList.Add(Mapper.Map<BrokerModel>(c)));
             return modelList;
         }
     }

@@ -11,11 +11,10 @@
     <header>
         <div class="top-menu">
             <div class="fluid-row">
-                <div class="brand">Brand Text</div>
+                <div class="brand">GSeguros</div>
                 <ul class="top-menu-links">
                     <li>@Html.ActionLink("Clientes", "Index", "Customer", new {area = "administration"}, null)</li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
+                    <li>@Html.ActionLink("Agentes", "Index", "Broker", new {area = "administration"}, null)</li>
                 </ul>
             </div>
         </div>
@@ -23,6 +22,7 @@
     @RenderBody()
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/Core/helper.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

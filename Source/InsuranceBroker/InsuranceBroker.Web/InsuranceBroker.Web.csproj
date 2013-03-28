@@ -152,8 +152,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\Controllers\BrokerController.cs" />
     <Compile Include="Areas\Administration\Controllers\CustomerController.cs" />
     <Compile Include="Areas\Administration\Models\ContentItem.cs" />
+    <Compile Include="Areas\Administration\Models\BrokerModel.cs" />
     <Compile Include="Areas\Administration\Models\CustomerModel.cs" />
     <Compile Include="Areas\Administration\Models\CustomerType.cs" />
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
@@ -259,7 +261,15 @@
     <Content Include="Areas\Administration\Views\Customer\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Customer\Details.cshtml" />
     <Content Include="Areas\Administration\Views\Customer\New.cshtml" />
+    <Content Include="Areas\Administration\Views\Customer\Delete.cshtml" />
+    <Content Include="Areas\Administration\Views\Customer\Edit.cshtml" />
+    <Content Include="Areas\Administration\Views\Broker\Delete.cshtml" />
+    <Content Include="Areas\Administration\Views\Broker\Details.cshtml" />
+    <Content Include="Areas\Administration\Views\Broker\Edit.cshtml" />
+    <Content Include="Areas\Administration\Views\Broker\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Broker\New.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\Core\helper.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -311,9 +321,13 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InsuranceBroker.Model\InsuranceBroker.Model.csproj">
-      <Project>{a2d4c06a-033a-401e-a886-85b571fc9f88}</Project>
-      <Name>InsuranceBroker.Model</Name>
+    <ProjectReference Include="..\InsuranceBroker.Entities\InsuranceBroker.Entities.csproj">
+      <Project>{E54E70DC-0311-416F-A53F-EC1F778C3249}</Project>
+      <Name>InsuranceBroker.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InsuranceBroker.Services\InsuranceBroker.Services.csproj">
+      <Project>{884994f6-cafd-4753-931b-ceaa4eefcf48}</Project>
+      <Name>InsuranceBroker.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

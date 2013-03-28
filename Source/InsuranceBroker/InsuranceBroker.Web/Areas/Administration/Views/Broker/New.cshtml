@@ -1,17 +1,17 @@
-﻿@model InsuranceBroker.Web.Areas.Administration.Models.CustomerModel
+﻿@model InsuranceBroker.Web.Areas.Administration.Models.BrokerModel
 @{
-    ViewBag.Title = "Nuevo Cliente";
+    ViewBag.Title = "Nuevo Agente";
     Layout = "~/Areas/Administration/Views/Shared/_Layout.cshtml";
 }
 
 <section class="main-content">
     <p class="section-title">@ViewBag.Title</p>
-    @using (Html.BeginForm("New", "Customer"))
+    @using (Html.BeginForm("New", "Broker"))
     {
         @Html.ValidationSummary(true)
         <div class="fluid-row">
             <div class="action-button" onclick=" submit(); ">GRABAR</div>
-            <div class="action-button" onclick=" callAction('@ViewBag.ListAction', '@ViewBag.Controller', ''); ">CANCELAR</div>
+            <div class="action-button" onclick=" callAction('@ViewBag.ListAction', '@ViewBag.Controller'); ">CANCELAR</div>
         </div>
         <fieldset>
             <legend>Datos Personales</legend>

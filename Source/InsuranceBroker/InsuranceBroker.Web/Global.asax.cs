@@ -8,7 +8,7 @@
 
     using AutoMapper;
 
-    using InsuranceBroker.Model.Entities;
+    using InsuranceBroker.Entities.Entities;
     using InsuranceBroker.Web.Areas.Administration.Models;
 
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -28,9 +28,9 @@
         private void MapEntities()
         {
             Mapper.CreateMap<CustomerModel, Customer>();
-            Mapper.CreateMap<List<CustomerModel>, List<Customer>>();
             Mapper.CreateMap<Customer, CustomerModel>();
-            Mapper.CreateMap<List<Customer>, List<CustomerModel>>();
+            Mapper.CreateMap<BrokerModel, Broker>();
+            Mapper.CreateMap<Broker, BrokerModel>();
         }
     }
 }

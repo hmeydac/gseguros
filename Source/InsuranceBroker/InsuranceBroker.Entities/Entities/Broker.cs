@@ -1,9 +1,9 @@
-﻿namespace InsuranceBroker.Model.Entities
+﻿namespace InsuranceBroker.Entities.Entities
 {
     using System;
     using System.ComponentModel.DataAnnotations;
 
-    public class Customer
+    public class Broker
     {
         [Key]
         public Guid Id { get; set; }

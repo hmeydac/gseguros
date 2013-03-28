@@ -32,9 +32,11 @@ body {
     .top-menu-links li {
         display: inline;
         line-height: 50px;
+        margin-right: 10px;
     }
 
         .top-menu-links li a {
+            font-size: 14pt;
             color: rgb(200,200,200);
             text-decoration: none;
             -moz-transition-duration: 0.5s;
@@ -64,10 +66,27 @@ body {
     position: absolute;
 }
 
+.block-title {
+    position: absolute;
+    left: 35px;
+    font-size: 14pt;
+    font-weight: 100;
+    color: rgb(50, 50, 50);
+    vertical-align: top;
+    text-align: left;
+}
+
+.block-info {
+    position: absolute;
+    font-size: 10pt;
+    right: 5px;
+    bottom: 0;
+}
+
 .content-block {
-    width: 160px;
+    min-width: 250px;
     height: 80px;
-    border: solid 1px rgb(200, 200, 200);
+    border: solid 1px rgb(200, 200, 200);   
     margin-right: 10px;
     margin-top: 10px;
     text-decoration: none;
@@ -75,12 +94,12 @@ body {
     -o-transition: 0.5s;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    text-align: right;
     vertical-align: top;
+    position: relative;
 }
 
     .content-block:hover {
-        background-color: rgb(255, 179, 67);
+        background-color: rgb(61, 174, 255);
         cursor: pointer;
         color: white;
         border: solid 1px rgb(200, 200, 200);
@@ -95,23 +114,6 @@ body {
     height: 32px;
 }
 
-.block-title {
-    position: relative;
-    height: 50px;
-    font-size: 14pt;
-    font-weight: 100;
-    color: rgb(50, 50, 50);
-    width: 120px;
-    vertical-align: top;
-    text-align: left;
-}
-
-.block-info {
-    position: relative;
-    font-size: 10pt;
-    right: 5px;
-    bottom: -5px;
-}
 
 .section-title {
     font-size: 32pt;
@@ -139,9 +141,11 @@ body {
 .main-content fieldset {
     margin-top: 15px;
     font-size: 10pt;
+    padding: 5px;
+    min-width: 300px;
 }
 
-.main-content fieldset input[type=text] {
+.main-content fieldset input[type=text], input[type=email] {
     width: 98%;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -150,8 +154,14 @@ body {
 
 .field-title {
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .field-validation-error {
     color: red;
+}
+
+.alert-text {
+    color: red;
+    font-weight: bold;
 }

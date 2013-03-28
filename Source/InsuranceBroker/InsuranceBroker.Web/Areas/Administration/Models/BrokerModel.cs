@@ -2,7 +2,7 @@
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class CustomerModel : ContentItem
+    public class BrokerModel : ContentItem
     {
         private const string EmailRegex = @"($^)|([A-Za-z0-9_\.-]*@[A-Za-z0-9-]*\.[A-Za-z]*)";
 

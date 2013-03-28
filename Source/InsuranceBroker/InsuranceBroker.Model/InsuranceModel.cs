@@ -2,10 +2,12 @@
 {
     using System.Data.Entity;
 
-    using InsuranceBroker.Model.Entities;
+    using InsuranceBroker.Entities.Entities;
 
     public class InsuranceModel : DbContext
     {
         public DbSet<Customer> Customers { get; set; }
+
+        public DbSet<Broker> Brokers { get; set; }
     }
 }
